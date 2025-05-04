@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+### <a id="inicio" />
+# Calculadora de Propinas con React + TypeScript + Vite
+*📓 [Español](#inicio)*
+*📓 [English](#start)*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto consiste en un programa que despliega un listado de elementos (que en este contexto son alimentos). Cada uno de estos elementos contiene campos como nombre, precio e id. Al seleccionar uno de estos elementos se agrega al apartado de consumo, donde se empieza a generar una orden. Una vez que se agregan elementos a la orden se empieza a generar el subtotal y una vez que se selecciona una opción de propina se genera el total y se puede "generar" la orden (en realidad se reinicia la orden, aún no se agrega la lógica para almacenar estas ordenes en una base de datos). 
 
-Currently, two official plugins are available:
+Algunas de las cosas que se aprendieron con este proyecto son:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### <a /> Modularidad y Reusabilidad con Componentes
+Al utilizar componentes, se hace un desglose de la interfaz mediante la cual se pueden reutilizar componentes (por ejemplo, los alimentos) y se establece una comunicación entre los mismos para mostrar o no el apartado de consumo y sus totales.
 
-## Expanding the ESLint configuration
+### <a /> Custom Hooks
+En el custom hook se encuentra la lógica para agregar o eliminar items del apartado de consumo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### <a /> Optimización del Rendimiento (Performance)
+Mediante el uso de operadores ternarios, se establece si se renderiza un componente o no, lo que puede mejorar el rendimiento de las aplicaciones web.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### <a /> Tipado Estricto con TypeScript
+Se definieron tipos para los props de los componentes y funciones
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### <a /> Framework CSS
+Se utilizó Tailwind CSS para manejar los estilos de la página
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+*📷[Screenshots](#screenshots)*
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Tip Calculator with React + TypeScript + Vite
+
+This project consists of a program that displays a list of items (which in this context are food items). Each of these items contains fields such as name, price, and ID. Selecting one of these items adds it to the consumption section, where an order is generated. Once items are added to the order, the subtotal is generated, and once a tip option is selected, the total is generated and the order can be "generated" (actually, the order is reset; the logic to store these orders in a database has not yet been added).
+
+Some of the things learned with this project are:
+
+### <a /> Modularity and Components Reusability
+Using components breaks down the interface through which components (e.g., food) can be reused, and communication is established between them to display or not display the consumption section and its totals.
+
+### <a /> Custom Hooks
+The custom hook contains the logic to add or remove items from the consumption section.
+
+### <a /> Performance Optimization
+By using ternary operators, you can determine whether a component is rendered or not, which can improve the performance of web applications.
+
+### <a  /> Strict Typing with TypeScript
+Types were defined for component and function props
+
+### <a  /> Framework CSS
+Tailwind CSS was used to handle the page styles
+
+---
+### <a id="screenshots" /> 
+# Screenshots
+![Interfaz Inicial](https://github.com/ReploidGI0/calc_propinas/blob/main/images/interfaz_propina1.PNG "Interfaz Inicial")
+![Interfaz Con Producto Agregado](https://github.com/ReploidGI0/calc_propinas/blob/main/images/interfaz_propina2.PNG "Interfaz Con Producto Agregado")
+![Interfaz Con Totales](https://github.com/ReploidGI0/calc_propinas/blob/main/images/propina_3.PNG "Interfaz Con Totales")
+
+
+
