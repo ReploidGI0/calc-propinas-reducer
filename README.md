@@ -7,6 +7,9 @@ Este proyecto consiste en un programa que despliega un listado de elementos (que
 
 Algunas de las cosas que se aprendieron con este proyecto son:
 
+### <a  /> useReducer
+Se toma un enfoque un tanto diferente a las otras versiones del proyecto ya que se gestiona el estado del carrito en el reducer. Con los reducers se puede agrupar la lógica (cuando esta se empieza a volver compleja) para que quede mejor organizada. 
+
 ### <a /> Modularidad y Reusabilidad con Componentes
 Al utilizar componentes, se hace un desglose de la interfaz mediante la cual se pueden reutilizar componentes (por ejemplo, los alimentos) y se establece una comunicación entre los mismos para mostrar o no el apartado de consumo y sus totales.
 
@@ -29,6 +32,9 @@ Se utilizó Tailwind CSS para manejar los estilos de la página
 This project consists of a program that displays a list of items (which in this context are food items). Each of these items contains fields such as name, price, and ID. Selecting one of these items adds it to the consumption section, where an order is generated. Once items are added to the order, the subtotal is generated, and once a tip option is selected, the total is generated and the order can be "generated" (actually, the order is reset; the logic to store these orders in a database has not yet been added).
 
 Some of the things learned with this project are:
+
+### <a /> useReducer
+This takes a slightly different approach than other versions of the project, as the cart state is managed in the reducer. Reducers allow you to group logic (when it starts to get complex) to keep it more organized.
 
 ### <a /> Modularity and Components Reusability
 Using components breaks down the interface through which components (e.g., food) can be reused, and communication is established between them to display or not display the consumption section and its totals.
